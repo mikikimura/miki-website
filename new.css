@@ -9,6 +9,9 @@
     object-fit: cover;
     object-position: 95% 0%;
 }
+nav{
+    display: none;
+}
 .theNav img{
     position: relative;
     float: right;
@@ -129,7 +132,7 @@ display: block;
 
 }
 
-@media only screen and (min-width: 401px) and (max-width: 1024px){
+@media only screen and (min-width: 415px) and (max-width: 1024px){
     .content {
         width: 1024px;
     }
@@ -143,6 +146,11 @@ display: block;
         object-fit: cover;
         object-position: 95% 0%;
     }
+
+    nav{
+        display: none;
+    }
+
     .theNav img{
         position: relative;
         float: right;
@@ -177,7 +185,7 @@ display: block;
         color: #D0B8B3;
         position: relative;
         text-align: right;
-        left: 200px;
+        right: 20px;
         bottom: 80px;
         font-family: 'Didot', sans-serif;
         font-size: 20px;
@@ -269,7 +277,26 @@ display: block;
         margin: 0;
         width: 140;
     }
-    
+    nav{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0px;
+        position: absolute;
+        top: 25px;
+        right: 5px;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+        
+    nav a{
+        color: black;
+        text-decoration: none;
+    }
+        
+    nav li{
+        display: inline-block;
+        width: 200px;
+    }
+
     .opening{
         width: 1024px;
         height: 800px;
@@ -331,6 +358,7 @@ display: block;
         display: flex;
         justify-content: center;
         width: 1440px;
+        margin-top: 70px;
     }
 
     .dashOne{
@@ -338,7 +366,7 @@ display: block;
         height: 4px;
         background-color: #A98A0F;
         display: block;
-      margin-left: 250px;
+      margin-left: 450px;
       margin-right: auto;
       margin-bottom: 40px;
     }
@@ -346,8 +374,8 @@ display: block;
     .content p{
         font-family: "Raleway";
         width: 700px;
-        display: block;
-        margin: 20px 200px;
+        margin-left: 400px;
+        
     }
     
     .dashTwo{
@@ -356,7 +384,7 @@ display: block;
     background-color: #A98A0F;
     margin-top: 100px;
     margin-bottom: 70px;
-    margin-left: 15px;
+    margin-left: 25px;
     display: block;
     }
 
@@ -375,23 +403,65 @@ display: block;
         font-size: 1.2em;
     }
 
-    .interests img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        object-fit: cover;
-        width: 50%;
-        margin-top: 40px;
-        border-radius: 40%;
+    .interests h4{
+        margin: 0px;
     }
-    
+
+    .interests p{
+        width: 300px;
+        margin: 0;
+    }
+    .pair{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .pair img{
+    border-radius: 50%;
+    width: 200px;
+    margin: 10px 40px;
+    }
+    .Basketball {
+        display: block;
+        text-align: center;
+        margin-right: 15px;
+        margin-left: 70px;
+    }
+
+    .Snowboarding {
+        display: block;
+        text-align: center;
+        margin: 0px 15px;
+    }
+
+    .Ukulele{
+        display: block;
+        text-align: center;
+        margin: 0px 15px;
+    }
+
+    .Coding {
+        display: block;
+        text-align: center;
+        margin-left: 15px;
+        margin-right: 70px;
+    }
+    .Other{
+        margin: 80px 50px;
+    }
+
+    .Other p{
+        width: 500px;
+        margin: 10px 0px
+    }
     .dashThree{
         height: 4px;
         background-color: #A98A0F;
         display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 30%;
+      width: 20%;
       margin-top: 120px;
     }
     
@@ -401,7 +471,8 @@ display: block;
     }
     
     .end h3{
-        font-size: 38px;
-    
+        font-size: 28px;
+        margin-top: 10px;
+        padding: 0;
     }
 }
