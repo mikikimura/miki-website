@@ -1,6 +1,6 @@
 .opening{
     width: 100%;
-    height: 800px;
+    height: 100vh;
 }
 
 .iphoneOpening{
@@ -26,7 +26,7 @@ nav{
 
 .circle{
     height: 700px;
-    width: 330px;
+    width: 100%;
     border-bottom-right-radius: 330px;
     border-top-right-radius: 330px;
     background-color: white;
@@ -34,19 +34,20 @@ nav{
     position: absolute;
     top: 65px;
     z-index: 2;
+    display: none;
 }
 
 .opening h1{
     color: #D8C5C0;
-    font-size: 85px;
+    font-size: 60px;
     position: absolute;
-  top: 150px;
-  left: 25px;
-  z-index: 1;
-  text-align: center;
-  font-family: 'Didot';
-  z-index: 1;
-}
+    top: 150px;
+    left: 25px;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Didot';
+    z-index: 1;
+    }
 
 .opening h3{
     color: #D0B8B3;
@@ -58,26 +59,30 @@ nav{
     font-size: 20px;
 }
 
+.content {
+    width: 100%;
+}
+
 .content h2{
     font-size: 45px;
     font-family: 'Josefin Sans';
     display: flex;
     justify-content: center;
-    width: 400px;
+    width: 100%;
 }
 .dashOne{
-    width: 320px;
+    width: 40%;
     height: 4px;
     background-color: #A98A0F;
     display: block;
-  margin-left: 35px;
-  margin-right: auto;
-  margin-bottom: 40px;
+    margin-left: 60%;
+    margin-right: auto;
+    margin-bottom: 40px;
 }
 
 .content p{
     font-family: "Raleway";
-    width: 400px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
