@@ -1,3 +1,9 @@
+/*Phone version*/
+body{
+    padding: 0;
+    margin: 0;
+}
+/*Opening*/
 .opening{
     width: 100%;
     height: 100vh;
@@ -9,15 +15,19 @@
     object-fit: cover;
     object-position: 95% 0%;
 }
+
 nav{
     display: none;
 }
+
 .theNav img{
     position: relative;
     float: right;
-    bottom: 800px;
-    left: 148px;
+    bottom: 100vh;
+    left: 140px;
     z-index: 1;
+    width: 10%;
+    height: auto;
 }
 
 .logo{
@@ -25,16 +35,15 @@ nav{
 }
 
 .circle{
-    height: 700px;
-    width: 100%;
+    height: 80vh;
+    width: 75%;
     border-bottom-right-radius: 330px;
     border-top-right-radius: 330px;
-    background-color: white;
+    background-color: #A98A0F;
     opacity: 0.5;
     position: absolute;
     top: 65px;
-    z-index: 2;
-    display: none;
+    z-index: 1;
 }
 
 .opening h1{
@@ -46,7 +55,7 @@ nav{
     z-index: 1;
     text-align: center;
     font-family: 'Didot';
-    z-index: 1;
+    z-index: 2;
     }
 
 .opening h3{
@@ -54,10 +63,12 @@ nav{
     position: relative;
     float: right;
     right: 10px;
-    bottom: 80px;
+    bottom: 70px;
     font-family: 'Didot', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
+
+/*Content*/
 
 .content {
     width: 100%;
@@ -70,25 +81,26 @@ nav{
     justify-content: center;
     width: 100%;
 }
+
 .dashOne{
     width: 40%;
     height: 4px;
     background-color: #A98A0F;
     display: block;
-    margin-left: 60%;
+    margin-left: 30%;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
 .content p{
     font-family: "Raleway";
-    width: 100%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .dashTwo{
-width: 100px;
+width: 30%;
 height: 4px;
 background-color: #A98A0F;
 margin-top: 70px;
@@ -99,385 +111,435 @@ display: block;
     font-family: 'Josefin Sans';
     font-size: 30px;
     text-align: right;
-    margin-top: 45px;
+    margin: 70px auto;
+    margin-bottom: 60px;
+    width: 80%;
 }
 
 .content h4{
     font-family: 'Didot', sans-serif;
     margin-top: 20px;
+    text-decoration: overline wavy #D0B8B3;
+}
+
+.Basketball, .Snowboarding, .Ukulele, .Coding, .Other{
+    margin-bottom: 60px;
+}
+
+.interests img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+}
+
+.dashThree{
+    height: 4px;
+    background-color: #A98A0F;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 120px;
+}
+
+/*End*/
+
+.end{
+    width: 100%;
+    text-align: center;
+}
+
+.end h3{
+    width: 60%;
+    font-size: 24px;
+    margin: 4%;
+}
+
+/*IPad version*/
+@media only screen and (min-width: 415px) and (max-width: 1024px){
+
+body{
+    padding: 0;
+    margin: 0;
+}
+/*Opening*/
+.opening{
+    width: 100%;
+    height: 100vh;
+}
+
+.iphoneOpening{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 95% 0%;
+}
+
+nav{
+    display: none;
+}
+
+.theNav img{
+    position: relative;
+    float: right;
+    bottom: 100vh;
+    left: 150px;
+    z-index: 1;
+    width: 10%;
+    height: auto;
+}
+
+.logo{
+    display: none;
+}
+
+.circle{
+    height: 90vh;
+    width: 65%;
+    border-bottom-right-radius: 530px;
+    border-top-right-radius: 530px;
+    background-color: #A98A0F;
+    opacity: 0.5;
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+}
+    
+.opening h1{
+    color: #D8C5C0;
+    font-size: 120px;
+    position: absolute;
+    top: 300px;
+    left: 30px;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Didot';
+    z-index: 2;
+}
+.opening h3{
+    color: #D0B8B3;
+    position: relative;
+    float: right;
+    right: 10px;
+    bottom: 80px;
+    font-family: 'Didot', sans-serif;
+    font-size: 25px;
+}
+
+/*Content*/
+
+.content {
+    width: 100%;
+}
+
+.content h2{
+    font-size: 55px;
+    font-family: 'Josefin Sans';
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.dashOne{
+    width: 60%;
+    height: 4px;
+    background-color: #A98A0F;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+
+.content p{
+    font-family: "Raleway";
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dashTwo{
+    width: 40%;
+    height: 4px;
+    background-color: #A98A0F;
+    margin-top: 70px;
+    display: block;
+}   
+
+.content h3{
+    font-family: 'Josefin Sans';
+    font-size: 35px;
+    text-align: right;
+    margin: 70px auto;
+    margin-bottom: 60px;
+    width: 80%;
+}
+.content h4{
+    font-family: 'Didot', sans-serif;
+    margin-top: 20px;
+    text-decoration: overline wavy #D0B8B3;
+    font-size: 25px;
+}
+
+.Basketball, .Snowboarding, .Ukulele, .Coding, .Other{
+    margin-bottom: 60px;
 }
 .interests img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
-    width: 100%;
-    margin-top: 40px;
-    border-radius: 40%;
+    width: 60%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 50%;
 }
 
 .dashThree{
-    width: 400px;
     height: 4px;
     background-color: #A98A0F;
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 120px;
 }
 
+/*End*/
+
 .end{
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    text-align: center;
 }
 
 .end h3{
+    width: 50%;
     font-size: 28px;
-
+    margin: 5%;
+}
 }
 
-@media only screen and (min-width: 415px) and (max-width: 1024px){
-    .content {
-        width: 1024px;
-    }
-    .opening{
-        width: 1024px;
-        height: 1350px;
-    }
-    .iphoneOpening{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 95% 0%;
-    }
-
-    nav{
-        display: none;
-    }
-
-    .theNav img{
-        position: relative;
-        float: right;
-        bottom: 1320px;
-        left: 133px;
-        z-index: 1;
-    }
-    .circle{
-        height: 1200px;
-        width: 530px;
-        border-bottom-right-radius: 530px;
-        border-top-right-radius: 530px;
-        background-color: white;
-        opacity: 0.5;
-        position: absolute;
-        top: 85px;
-        z-index: 2;
-    }
-    
-    .opening h1{
-        color: #D8C5C0;
-        font-size: 105px;
-        position: absolute;
-      top: 350px;
-      left: 85px;
-      z-index: 1;
-      text-align: center;
-      font-family: 'Didot';
-      z-index: 1;
-    }
-    .opening h3{
-        color: #D0B8B3;
-        position: relative;
-        text-align: right;
-        right: 20px;
-        bottom: 80px;
-        font-family: 'Didot', sans-serif;
-        font-size: 20px;
-    }
-    .content h2{
-        font-size: 55px;
-        font-family: 'Josefin Sans';
-        display: flex;
-        justify-content: center;
-        width: 1000px;
-    }
-
-    .dashOne{
-        width: 520px;
-        height: 4px;
-        background-color: #A98A0F;
-        display: block;
-      margin-left: 250px;
-      margin-right: auto;
-      margin-bottom: 40px;
-    }
-    
-    .content p{
-        font-family: "Raleway";
-        width: 700px;
-        display: block;
-        margin: 20px 200px;
-    }
-    
-    .dashTwo{
-    width: 150px;
-    height: 4px;
-    background-color: #A98A0F;
-    margin-top: 100px;
-    margin-bottom: 70px;
-    margin-left: 15px;
-    display: block;
-    }
-
-    .content h3{
-        font-family: 'Josefin Sans';
-        font-size: 35px;
-        text-align: right;
-        margin-top: 65px;
-        margin-right: 15px;
-        margin-bottom: 60px;
-    }
-    
-    .content h4{
-        font-family: 'Didot', sans-serif;
-        margin-top: 20px;
-        font-size: 1.2em;
-    }
-
-    .interests img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        object-fit: cover;
-        width: 50%;
-        margin-top: 40px;
-        border-radius: 40%;
-    }
-    
-    .dashThree{
-        height: 4px;
-        background-color: #A98A0F;
-        display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 30%;
-      margin-top: 120px;
-    }
-    
-    .end{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .end h3{
-        font-size: 38px;
-    
-    }
-}
-
+/*Computer version*/
 @media only screen and (min-width: 1025px) {
-    body {
-        padding: 0;
-        margin: 0;
-        width: 140;
-    }
-    nav{
-        display: flex;
-        flex-direction: row-reverse;
-        margin: 0px;
-        position: absolute;
-        top: 25px;
-        right: 5px;
-        font-family: 'Josefin Sans', sans-serif;
+body {
+    padding: 0;
+    margin: 0;
+}
+/*Opening*/
+.opening{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0px;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    font-family: 'Josefin Sans', sans-serif;
     }
         
-    nav a{
-        color: black;
-        text-decoration: none;
-    }
+nav a{
+    color: black;
+    text-decoration: none;
+}
         
-    nav li{
-        display: inline-block;
-        width: 200px;
-    }
+nav li{
+    display: inline-block;
+    width: 170px;
+}
 
-    .opening{
-        width: 1440px;
-        height: 800px;
-    }
-    .iphoneOpening{
-        padding: 0px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 95% 10%;
-    }
-    .theNav img{
-        display: none;
-    }
+.iphoneOpening{
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 95% 10%;
+}
+.theNav img{
+    display: none;
+}
 
-    .logo{
-        display: block;
-        position: absolute;
-        bottom: 720px;
-        left: 20px;
-    }
-    .circle{
-        height: 700px;
-        width: 700px;
-        border-top-right-radius: 100%;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        background-color: white;
-        opacity: 0.5;
-        position: absolute;
-        top: 100px;
-        z-index: 2;
-    }
-    
-    .opening h1{
-        color: #D8C5C0;
-        font-size: 125px;
-        position: absolute;
-      top: 350px;
-      left: 85px;
-      z-index: 1;
-      text-align: center;
-      font-family: 'Didot';
-      z-index: 1;
-    }
-    .opening h3{
-        color: #D0B8B3;
-        position: absolute;
-        float: right;
-        right: 15px;
-        bottom: 0px;
-        font-family: 'Didot', sans-serif;
-        font-size: 20px;
-    }
-    .content h2{
-        font-size: 55px;
-        font-family: 'Josefin Sans';
-        display: flex;
-        justify-content: center;
-        width: 1440px;
-        margin-top: 70px;
-    }
+.logo{
+    display: block;
+    position: absolute;
 
-    .dashOne{
-        width: 520px;
-        height: 4px;
-        background-color: #A98A0F;
-        display: block;
-      margin-left: 450px;
-      margin-right: auto;
-      margin-bottom: 40px;
-    }
-    
-    .content p{
-        font-family: "Raleway";
-        width: 700px;
-        margin-left: 400px;
-        
-    }
-    
-    .dashTwo{
-    width: 150px;
+    bottom: 91%;
+    left: 2vw;
+}
+
+.circle{
+    height: auto;
+    padding-top: 45%;
+    width: 45%;
+    border-radius: 100%;
+    background-color: #A98A0F;
+    z-index: 1;
+    position: absolute;
+    top: 12%;
+    left: 8%;
+}
+
+.opening h1{
+    color: #D8C5C0;
+    font-size: 120px;
+    position: absolute;
+    top: 20%;
+    left: 12%;
+    z-index: 2;
+    text-align: center;
+    font-family: 'Didot';
+}
+
+.opening h3{
+    color: #D0B8B3;
+    position: relative;
+    float: right;
+    right: 10px;
+    bottom: 70px;
+    font-family: 'Didot', sans-serif;
+    font-size: 18px;
+}
+
+/*Content*/
+
+.content {
+    width: 100%;
+}
+.content h2{
+    font-size: 50px;
+    font-family: 'Josefin Sans';
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.dashOne{
+    width: 40%;
     height: 4px;
     background-color: #A98A0F;
-    margin-top: 100px;
-    margin-bottom: 70px;
-    margin-left: 25px;
     display: block;
-    }
-
-    .content h3{
-        font-family: 'Josefin Sans';
-        font-size: 35px;
-        text-align: right;
-        margin-top: 65px;
-        margin-right: 15px;
-        margin-bottom: 60px;
-    }
+    margin-left: 30%;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+.content p{
+    font-family: "Raleway";
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
     
-    .content h4{
-        font-family: 'Didot', sans-serif;
-        margin-top: 20px;
-        font-size: 1.2em;
-    }
+.dashTwo{
+    width: 20%;
+    height: 4px;
+    background-color: #A98A0F;
+    margin-top: 70px;
+    display: block;
+    margin-left: 10px;
+}
 
-    .interests h4{
-        margin: 0px;
-    }
+.content h3{
+    font-family: 'Josefin Sans';
+    font-size: 35px;
+    text-align: right;
+    margin: 70px auto;
+    margin-bottom: 60px;
+    width: 80%;
+}
+    
+.content h4{
+    font-family: 'Didot', sans-serif;
+    margin-top: 20px;
+    text-decoration: overline wavy #D0B8B3;
+}
 
-    .interests p{
-        width: 300px;
-        margin: 0;
-    }
-    .pair{
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
+.pair{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
-    .pair img{
+.Basketball{
+    width: 50%;
+}
+
+.Basketball img{
+    width: 50%;
+    height: auto;
     border-radius: 50%;
-    width: 200px;
-    margin: 10px 40px;
-    }
-    .Basketball {
-        display: block;
-        text-align: center;
-        margin-right: 15px;
-        margin-left: 70px;
-    }
+}
 
-    .Snowboarding {
-        display: block;
-        text-align: center;
-        margin: 0px 15px;
-    }
+.Snowboarding{
+    width: 50%;
+}
 
-    .Ukulele{
-        display: block;
-        text-align: center;
-        margin: 0px 15px;
-    }
+.Snowboarding img{
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
 
-    .Coding {
-        display: block;
-        text-align: center;
-        margin-left: 15px;
-        margin-right: 70px;
-    }
-    .Other{
-        margin: 80px 50px;
-    }
+.pairTwo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
-    .Other p{
-        width: 500px;
-        margin: 10px 0px
-    }
-    .dashThree{
-        height: 4px;
-        background-color: #A98A0F;
-        display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 20%;
-      margin-top: 120px;
-    }
+.CAB{
+    width: 50%;
+}
+
+.Coding{
+    width: 50%;
+}
+
+.CAB img{
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.Coding img{
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.Other{
+    margin: 80px 50px;
+}
+
+.Other p{
+    width: 80%;
+    margin: 10px 0px
+}
+
+.dashThree{
+    height: 4px;
+    background-color: #A98A0F;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    margin-top: 120px;
+}
+
+.end{
+    width: 100%;
+    display: flex;
+}
     
-    .end{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .end h3{
-        font-size: 28px;
-        margin-top: 10px;
-        padding: 0;
-    }
+.end h3{
+    font-size: 28px;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    width: 55%;
+}
 }
