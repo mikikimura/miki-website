@@ -347,7 +347,7 @@ body {
     height: 100vh;
 }
 
-nav{
+.computerNav{
     display: flex;
     flex-direction: row-reverse;
     margin: 0px;
@@ -358,12 +358,12 @@ nav{
     z-index: -1;
     }
         
-nav a{
+.computerNav a{
     color: black;
     text-decoration: none;
 }
         
-nav li{
+.computerNav li{
     display: inline-block;
     width: 150px;
 }
