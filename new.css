@@ -51,7 +51,7 @@ body{
 
 .opening h1{
     color: #D8C5C0;
-    font-size: 60px;
+    font-size: 50px;
     position: fixed;
     top: 35%;
     left: 5%;
@@ -269,7 +269,7 @@ body{
 
 .content p{
     font-family: "Raleway";
-    width: 80%;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -294,6 +294,9 @@ body{
     margin-top: 20px;
     text-decoration: overline wavy #D0B8B3;
     font-size: 25px;
+    width: 55%;
+    margin: auto;
+    padding-top: 40px;
 }
 
 .Basketball, .Snowboarding, .Ukulele, .Coding, .Other{
@@ -304,10 +307,10 @@ body{
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
-    width: 60%;
     margin-top: 30px;
     margin-bottom: 50px;
     border-radius: 50%;
+    width: 55%;
 }
 
 .dashThree{
@@ -476,7 +479,9 @@ body {
     font-family: 'Didot', sans-serif;
     margin-top: 20px;
     text-decoration: overline wavy #D0B8B3;
-    margin-left: 10%;
+    padding-top: 37px;
+    width: 55%;
+    margin: auto;
 }
 
 .pair{
