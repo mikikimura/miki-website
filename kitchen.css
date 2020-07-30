@@ -75,7 +75,7 @@ body{
     transition-delay: 0.5s;
 }
 .menu ul{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -137,10 +137,19 @@ margin-bottom: 8%;
 margin-left: auto;
 margin-right: auto;
 }
+.dashTwo{
+    height: 4px;
+    background-color: #A98A0F;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    margin-top: 5%;
+}
 
 .dashThree{
     height: 4px;
-    background-color: #A98A0F;
+    background-color: #A2A77F;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -230,7 +239,7 @@ margin-right: auto;
 
 .dashThree{
     height: 4px;
-    background-color: #A98A0F;
+    background-color: #A2A77F;
     display: block;
     margin-left: auto;
     margin-right: auto;
