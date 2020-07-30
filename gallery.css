@@ -75,7 +75,7 @@ body{
     transition-delay: 0.5s;
 }
 .menu ul{
-    position: absolute;
+    position:fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -132,6 +132,7 @@ body{
     margin: 0;
     left: 0;
     animation: 40s slider infinite;
+    z-index: -1;
 }
 
 #slider figure img {
@@ -187,6 +188,7 @@ body{
     margin: 0;
     left: 0;
     animation: 40s slider infinite;
+    z-index: -1;
 }
 
 #sliderTwo figure img {
