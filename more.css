@@ -1,0 +1,334 @@
+/*Phone version*/
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+a:link{
+    color: #A98A0F;
+}
+
+a:visited{
+    color: rgb(155, 87, 132);
+}
+
+.opening{
+    width: 100%;
+    height: 50vh;
+}
+
+.opening img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: 95% 0%;
+    position: fixed;
+    z-index: -3;
+}
+
+.opening h1{
+    width: 100%;
+    text-align: center;
+    top: 19%;
+    position: fixed;
+    font-family: 'Didot';
+    z-index: -1;
+}
+
+.computerNav{
+    display: none;
+}
+
+.toggle { 
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+    /*
+    cursor: pointer;
+    */
+}
+
+.toggle:before {
+    content: '+';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    border-width: 0;
+    background-color: black;
+    transition: 0.5s;
+}
+.toggle.active:before{
+    transform: rotate(360deg);
+    background: #A98A0F;
+    border-width: 0;
+}
+
+.overlay{
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: black;
+    transition: transform 0.5s;
+}
+.overlay.active{
+    transform: scale(100,100);
+}
+
+.menu{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+    visibility: hidden;
+}
+.menu.active{
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+.menu ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+.menu ul li{
+    list-style: none;
+}
+
+.menu ul li a{
+    position: relative;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    margin: 20px 0;
+    display: block;
+    text-shadow: 0 2px 5px rgb(0,0,0,.5);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.menu ul li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #A98A0F;
+    z-index: -1;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.menu ul li a:hover:before{
+    transform: scaleX(2);
+}
+
+.logo{
+    position: fixed;
+    z-index: -1;
+    left: 2%;
+    top: 2%;
+}
+
+.content{
+    background-color: white;
+    width: 100%;
+}
+
+.content h2{
+    color: black;
+    font-family: 'Josefin Sans';
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+.content p{
+    font-family: "Raleway";
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content h3{
+    font-family: 'Didot', sans-serif;
+    color: #A98A0F;
+    margin: 10% 5%;
+}
+.list{
+    width: 100%;
+} 
+
+.list strong{
+    color:rgb(108, 184, 108);
+}
+
+.list li{
+    margin: 4% 5%;
+}
+.divider{
+    height: 4px;
+    background-color: #A98A0F;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 50px;
+}
+
+.dashThree{
+    height: 4px;
+    background-color: #A98A0F;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-top: 50px;
+}
+
+.end{
+    width: 100%;
+}
+    
+.end h3{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 28px;
+    margin-top: 2%;
+    font-family: 'Josefin Sans';
+}
+.end h3 a{
+    color: black;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 1025px){
+    .computerNav{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0px;
+        position: fixed;
+        top: 4%;
+        right: 0%;
+        line-height: 0%;
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: black;
+        padding: 0.7% 0;
+        }
+            
+    .computerNav a{
+        color: white;
+        text-decoration: none;
+    }
+            
+    .computerNav li{
+        display: inline-block;
+        width: 150px;
+    }
+    .computerNav ul li a:hover {
+        color: #A98A0F;
+        cursor: pointer;
+    }
+    .toggle{
+        display: none;
+    }
+    
+    .overlay{
+        display: none;
+    }
+    
+    .menu{
+        display: none;
+    }
+    
+    .logo{
+        position: fixed;
+        z-index: -1;
+        left: 2%;
+        top: 2%;
+    }
+
+    .content h2{
+        color: black;
+        font-family: 'Josefin Sans';
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .content p{
+        font-family: "Raleway";
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .content h3{
+        font-family: 'Didot', sans-serif;
+        color: #A98A0F;
+        margin: 4% 15%;
+        text-decoration: underline;
+    }
+
+    .list{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .divider{
+        height: 4px;
+        background-color: #A2A77F;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-top: 50px;
+    }
+
+    .writing .coding p{
+        text-align: center;
+    }
+
+.dashThree{
+    height: 4px;
+    background-color: #A98A0F;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    margin-top: 50px;
+}
+
+.end{
+    width: 100%;
+}
+    
+.end h3{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 28px;
+    font-family: 'Josefin Sans';
+    margin-top: 2%;
+}
+.end h3 a{
+    color: black;
+    text-decoration: none;
+}
+}

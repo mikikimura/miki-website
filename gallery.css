@@ -1,0 +1,438 @@
+/*Phone version*/
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.opening{
+    width: 100%;
+    height: 8vh;
+}
+
+.computerNav{
+    display: none;
+}
+
+.toggle { 
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+    /*
+    cursor: pointer;
+    */
+}
+
+.toggle:before {
+    content: '+';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    border-width: 0;
+    background-color: black;
+    transition: 0.5s;
+}
+.toggle.active:before{
+    transform: rotate(360deg);
+    background: #A98A0F;
+    border-width: 0;
+}
+
+.overlay{
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: black;
+    transition: transform 0.5s;
+}
+.overlay.active{
+    transform: scale(100,100);
+}
+
+.menu{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+    visibility: hidden;
+}
+.menu.active{
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+.menu ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+.menu ul li{
+    list-style: none;
+}
+
+.menu ul li a{
+    position: relative;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    margin: 20px 0;
+    display: block;
+    text-shadow: 0 2px 5px rgb(0,0,0,.5);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.menu ul li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #A98A0F;
+    z-index: -1;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.menu ul li a:hover:before{
+    transform: scaleX(2);
+}
+
+.logo{
+    position: fixed;
+    z-index: -1;
+    left: 2%;
+    top: 2%;
+}
+
+/*slider*/
+#slider{
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#slider figure {
+    position: relative;
+    width: 1000%;
+    margin: 0;
+    left: 0;
+    animation: 40s slider infinite;
+}
+
+#slider figure img {
+    width: 10%;
+    float: left;
+    z-index: -1;
+}
+@keyframes slider{
+ 0% {
+     left: 0;
+ }
+ 10%{
+     left: -100;
+ }
+ 20%{
+     left: -200;
+ }
+ 30%{
+     left: -300%;
+ }
+ 40%{
+     left: -400%;
+ }
+50%{
+    left: -500%;
+}
+60%{
+    left: -600%
+}
+70%{
+    left: -700%;
+}
+80%{
+    left: -800%;
+}
+90%{
+    left: -900%;
+}
+100%{
+    left: 0%;
+}
+}
+
+/*sliderTwo*/
+#sliderTwo{
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#sliderTwo figure {
+    position: relative;
+    width: 1000%;
+    margin: 0;
+    left: 0;
+    animation: 40s slider infinite;
+}
+
+#sliderTwo figure img {
+    width: 10%;
+    float: left;
+    margin-top: 0.4%;
+}
+@keyframes slider{
+ 0% {
+     left: 0;
+ }
+ 10%{
+     left: -100;
+ }
+ 20%{
+     left: -200;
+ }
+ 30%{
+     left: -300%;
+ }
+ 40%{
+     left: -400%;
+ }
+50%{
+    left: -500%;
+}
+60%{
+    left: -600%
+}
+70%{
+    left: -700%;
+}
+80%{
+    left: -800%;
+}
+90%{
+    left: -900%;
+}
+100%{
+    left: 0%;
+}
+}
+
+
+.dashThree{
+    height: 4px;
+    background-color: #A98A0F;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-top: 50px;
+}
+
+.end{
+    width: 100%;
+}
+    
+.end h3{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 28px;
+    margin-top: 2%;
+    font-family: 'Josefin Sans';
+}
+.end h3 a{
+    color: black;
+    text-decoration: none;
+}
+
+
+@media only screen and (min-width: 1025px){
+    .content{
+        cursor: ns-resize;
+    }
+    .computerNav{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0px;
+        position: absolute;
+        top: 4%;
+        right: 0%;
+        line-height: 0%;
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: black;
+        padding: 0.7% 0;
+        }
+            
+    .computerNav a{
+        color: white;
+        text-decoration: none;
+    }
+            
+    .computerNav li{
+        display: inline-block;
+        width: 150px;
+    }
+    .computerNav ul li a:hover {
+        color: #A98A0F;
+        cursor: pointer;
+    }
+    .toggle{
+        display: none;
+    }
+    
+    .overlay{
+        display: none;
+    }
+    
+    .menu{
+        display: none;
+    }
+    
+    .logo{
+        position: absolute;
+        z-index: -1;
+        left: 2%;
+        top: 2%;
+    }
+
+    
+/*slider*/
+#slider{
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+#slider figure img {
+    width: 10%;
+    float: left;
+    height: 80vh;
+    object-fit: contain;
+}
+@keyframes slider{
+ 0% {
+     left: 0;
+ }
+ 20%{
+     left: 0;
+ }
+ 25%{
+     left: -100%;
+ }
+ 45%{
+     left: -100%;
+ }
+50%{
+    left: -200%;
+}
+70%{
+    left: -200%
+}
+75%{
+    left: -300%;
+}
+95%{
+    left: -300%;
+}
+100%{
+    left: -400%;
+}
+}
+/*sliderTwo*/
+#sliderTwo {
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+#sliderTwo figure {
+    position: relative;
+    width: 1000%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+#sliderTwo figure img {
+    width: 10%;
+    float: left;
+    object-fit: contain;
+    height: 70vh;
+}
+
+@keyframes slider{
+    0% {
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%
+    }
+    75%{
+        left: -300%;
+    } 
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;}}
+
+.dashThree{
+    height: 4px;
+    background-color: #A98A0F;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-top: 50px;
+}
+
+.end{
+    width: 100%;
+    cursor: pointer;
+}
+    
+.end h3{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 28px;
+    font-family: 'Josefin Sans';
+  margin-top: 2%;
+}
+.end h3 a{
+    color: black;
+    text-decoration: none;
+}
+}
+

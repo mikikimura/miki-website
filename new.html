@@ -14,24 +14,47 @@
             <nav class="computerNav">
                 <ul>
                     <li>
-                       <a href="Index.html"><u>ABOUT ME</u></a>  
+                        <a href="new.html"><u>HOME</u></a>  
                     </li>
                     <li>
-                       <a href="Gallery.html">GALLERY</a>  
+                       <a href="gallery.html">GALLERY</a>  
                     </li>
                     <li>
-                       <a href="Cooking.html">COOKING</a> 
+                       <a href="kitchen.html">KITCHEN</a> 
                     </li>
                     <li>
-                       <a href="More.html">MORE. . .</a>
+                       <a href="more.html">MORE. . .</a>
                     </li>
                 </ul>
             </nav>
-            <nav class="otherNav">
-                <div class="theNav">
-                    <img src="./navToggle.svg">
-                </div>
-            </nav>
+            <div class="toggle"></div>
+            <div class="overlay"></div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="new.html"><u>HOME</u></a>  
+                    </li>
+                    <li>
+                       <a href="gallery.html">GALLERY</a>  
+                    </li>
+                    <li>
+                       <a href="kitchen.html">KITCHEN</a> 
+                    </li>
+                    <li>
+                       <a href="more.html">MORE. . .</a>
+                    </li>
+                </ul>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('.toggle').click(function(){
+                        $('.toggle').toggleClass('active')
+                        $('.overlay').toggleClass('active')
+                        $('.menu').toggleClass('active')
+                    })
+                })
+            </script>
             <div class="opening">
                 <img class="iphoneOpening"src="./Main.JPG"
                 >
@@ -59,6 +82,9 @@
                 Hi, I'm Miki ! 
             </h2>
             <span class="dashOne">
+            </span>
+            <span class="profile">
+                <img src="./profile.JPG">
             </span>
             <p>
                 I am a Japanese highschool student living in Santiago, Chile: born in Lima, Peru.  
@@ -120,13 +146,27 @@
                         <h4>
                             Cooking/ Baking
                         </h4>
-                        <img src="./Ukulele.jpg"
+                        <img src="./kimuchi-don.jpg"
                         width="300" height="200">
                         <p>
                            My love for food has grown to me making my own food and desserts. I love trying to make new things and experiementing with it, and sharing them 
-                           with my parents. My mom cooks the BESTTTT, and I want to cook like her. She doesn't really follow rescpies and she seasons everything with her tongue, as in random. 
+                           with my parents. My mom cooks the BESTTTT, and I want to cook like her. She doesn't really follow rescpies and she seasons everything with her tongue, as in random.
+                           Check some of the food I made <a href="./kitchen.html">here</a>. 
                         </p>
                     </div>
+                    <div class="photography">
+                        <h4>
+                            Photography
+                        </h4>
+                        <img src="./Photography.JPG"
+                        width="300" height="200">
+                        <p>
+                            I love taking pictures, because I can capture a beautiful momment forever. A photo allows me to reminisce
+                            upon the past. I take pictures with a non-professonal camera or my iphone. Check them out <a href="./gallery.html">here</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="pairThree">
                     <div class="Coding">
                         <h4>
                             Coding
@@ -138,21 +178,20 @@
                             My only project is this website. 
                         </p>
                     </div>
+                    <div class="Other">
+                        <h4>
+                            Other
+                        </h4>
+                        <p>
+                           I enjoy playing my ukulele as well, and taking photos. <a href="." target="_blank">here</a>. 
+                        </p>
+                    </div>
                 </div>
-                <div class="Other">
-                    <h4>
-                        Other
-                    </h4>
-                    <p>
-                       I enjoy playing my ukulele as well, and taking photos. This is my gallery page, <a href="." target="_blank">here</a>. 
-                    </p>
-                </div>
-
-                </div>
+            </div>
             <span class="dashThree">
             </span>
             <div class="end">
-                <h3><img src="./instagram.svg"> _miki.kimura</h3>
+                <h3><img src="./instagram.svg"><a href="https://www.instagram.com/0128.03/" target="_blank">_miki.kimura</a></h3>
             </div>
         </div>
     </body>

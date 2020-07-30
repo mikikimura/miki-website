@@ -3,6 +3,14 @@ body{
     padding: 0;
     margin: 0;
 }
+
+a:link{
+    color: #A98A0F;
+}
+
+a:visited{
+    color: rgb(155, 87, 132);
+}
 /*Opening*/
 .opening{
     width: 100%;
@@ -21,13 +29,104 @@ body{
     display: none;
 }
 
-.theNav img{
+.toggle { 
     position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+    /*
+    cursor: pointer;
+    */
+}
+
+.toggle:before {
+    content: '+';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    border-width: 0;
+    background-color: black;
+    transition: 0.5s;
+}
+.toggle.active:before{
+    transform: rotate(360deg);
+    background: #A98A0F;
+    border-width: 0;
+}
+
+.overlay{
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: black;
+    transition: transform 0.5s;
+}
+.overlay.active{
+    transform: scale(100,100);
+}
+
+.menu{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+    visibility: hidden;
+}
+.menu.active{
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+.menu ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+.menu ul li{
+    list-style: none;
+}
+
+.menu ul li a{
+    position: relative;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    margin: 20px 0;
+    display: block;
+    text-shadow: 0 2px 5px rgb(0,0,0,.5);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.menu ul li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #A98A0F;
     z-index: -1;
-    right: 2%;
-    top: 2%;
-    width: 10%;
-    height: auto;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.menu ul li a:hover:before{
+    transform: scaleX(2);
 }
 
 .logo{
@@ -97,6 +196,17 @@ body{
     margin-right: auto;
     margin-bottom: 70px;
 }
+.profile{  
+    float: left;
+    shape-outside: circle(50%);
+    margin-left: 3%;
+    margin-right: 2%;
+}
+.profile img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
 
 .content p{
     font-family: "Raleway";
@@ -104,6 +214,14 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+/*
+p:first-letter{
+    display:block;
+    float:left;
+    margin:3px;
+    color:#A98A0F;
+    font-size:300%;
+}*/
 
 .dashTwo{
 width: 30%;
@@ -137,10 +255,17 @@ display: block;
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
-    width: 80%;
     margin-top: 30px;
     margin-bottom: 50px;
     border-radius: 50%;
+    width: 50%;
+    height: auto;
+}
+
+.Coding img{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
 }
 
 .dashThree{
@@ -165,6 +290,11 @@ display: block;
     font-size: 24px;
     margin-top: 4%;
     text-align: center;
+}
+
+.end h3 a{
+    color: black;
+    text-decoration: none;
 }
 
 /*IPad version*/
@@ -294,8 +424,7 @@ body{
     margin-top: 20px;
     text-decoration: overline wavy #D0B8B3;
     font-size: 25px;
-    width: 55%;
-    margin: auto;
+    width: 50%;
     padding-top: 40px;
 }
 
@@ -310,9 +439,15 @@ body{
     margin-top: 30px;
     margin-bottom: 50px;
     border-radius: 50%;
-    width: 55%;
+    width: 50%;
+    height: auto;
 }
 
+.Coding img{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
 .dashThree{
     height: 4px;
     background-color: #A98A0F;
@@ -336,6 +471,12 @@ body{
     margin-top: 4%;
     text-align: center;
 }
+
+.end h3 a{
+    color: black;
+    text-decoration: none;
+}
+
 }
 
 /*Computer version*/
@@ -354,21 +495,25 @@ body {
     display: flex;
     flex-direction: row-reverse;
     margin: 0px;
-    position: fixed;
+    position: absolute;
     top: 4%;
     right: 0%;
     font-family: 'Josefin Sans', sans-serif;
-    z-index: -1;
+    background-color: black;
     }
         
 .computerNav a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
         
 .computerNav li{
     display: inline-block;
     width: 150px;
+}
+
+.computerNav ul li a:hover {
+    color: #A98A0F;
 }
 
 .iphoneOpening{
@@ -380,7 +525,16 @@ body {
     position: fixed;
     z-index: -3;
 }
-.theNav img{
+
+.toggle{
+    display: none;
+}
+
+.overlay{
+    display: none;
+}
+
+.menu{
     display: none;
 }
 
@@ -450,6 +604,19 @@ body {
     margin-right: auto;
     margin-bottom: 70px;
 }
+.profile{  
+    float: left;
+    shape-outside: circle(50%);
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 4%;
+}
+.profile img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
 .content p{
     font-family: "Raleway";
     width: 60%;
@@ -480,8 +647,8 @@ body {
     margin-top: 20px;
     text-decoration: overline wavy #D0B8B3;
     padding-top: 37px;
-    width: 55%;
-    margin: auto;
+    width: 50%;
+    margin-left: 20%;
 }
 
 .pair{
@@ -496,7 +663,7 @@ body {
 }
 
 .Basketball img{
-    width: 50%;
+    width: 45%;
     height: auto;
     border-radius: 50%;
 }
@@ -506,7 +673,7 @@ body {
 }
 
 .Snowboarding img{
-    width: 50%;
+    width: 45%;
     height: auto;
     border-radius: 50%;
 }
@@ -518,33 +685,47 @@ body {
     justify-content: space-evenly;
 }
 
+.photography{
+    width: 50%;
+}
+
 .CAB{
     width: 50%;
+}
+.photography img{
+    width: 45%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.CAB img{
+    width: 45%;
+    height: auto;
+    border-radius: 50%;
 }
 
 .Coding{
     width: 50%;
 }
 
-.CAB img{
+.Other{
     width: 50%;
-    height: auto;
-    border-radius: 50%;
 }
 
 .Coding img{
-    width: 50%;
+    width: 45%;
     height: auto;
     border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
 }
 
-.Other{
-    margin: 80px 50px;
-}
-
-.Other p{
-    width: 80%;
-    margin-left: 10%;
+.pairThree{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .dashThree{
@@ -565,7 +746,11 @@ body {
 .end h3{
     width: 50%;
     font-size: 28px;
-    margin-top: 4%;
     text-align: center;
+    margin-top: 2%;
+}
+.end h3 a{
+    color: black;
+    text-decoration: none;
 }
 }
