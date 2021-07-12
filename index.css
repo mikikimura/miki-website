@@ -43,7 +43,7 @@ a:visited{
     */
 }
 
-.toggle:before {
+.toggle::before {
     content: '+';
     position: absolute;
     top: 0;
@@ -59,7 +59,7 @@ a:visited{
     background-color: black;
     transition: 0.5s;
 }
-.toggle.active:before{
+.toggle.active::before{
     transform: rotate(360deg);
     background: #A98A0F;
     border-width: 0;
@@ -268,6 +268,32 @@ display: block;
     border-width: 1px;
 }
 
+.photo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.photo img{
+    width: 30%;
+    height: 30%;
+    border-radius: 0%;
+    margin: 10px;
+}
+
+.phonephoto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.phonephoto img{
+    width: 20%;
+    height: auto;
+    border-radius: 0%;
+    margin: 10px;
+}
+
 .dashThree{
     height: 4px;
     background-color: #A2A77F;
@@ -447,6 +473,32 @@ body{
     border-style: solid;
     border-color: black;
     border-width: 1px;
+}
+
+.photo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.photo img{
+    width: 30%;
+    height: 30%;
+    border-radius: 0%;
+    margin: 10px;
+}
+
+.phonephoto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.phonephoto img{
+    width: 20%;
+    height: auto;
+    border-radius: 0%;
+    margin: 10px;
 }
 .dashThree{
     height: 4px;
@@ -727,6 +779,8 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+
 
 .dashThree{
     height: 4px;
